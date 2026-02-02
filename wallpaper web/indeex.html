@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Wallpapers</title>
+     <link rel="stylesheet" href="stylee.css">
+</head>
+<body>
+    <h1>Wallpapers Website</h1>
+    <div class="gallery" id="gallery"></div>
+    <script>
+        const wallpapers = [
+            { url: 'https://plus.unsplash.com/premium_photo-1739955024115-e2d219766d49?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', title: "Black" },
+            { url: "chloe-lefleur-2nX1ubPiY8I-unsplash.jpg", title: "Painting" },
+            { url: "chloe-lefleur-xP0zAJ9MhMw-unsplash.jpg", title: "Wall" },
+            { url: "josh-hild-xLQM7Tnqdpg-unsplash.jpg", title: "City" },
+            { url: "IMG20221007165214.jpg", title: "Sky" },
+            { url: "IMG20221007165220.jpg", title: "Cloud" },
+            { url: "IMG20221009204303.jpg", title: "Moon" },
+            { url: "IMG20221109174035.jpg", title: "Rossy" },
+            { url: "IMG20230708172249.jpg", title: "School Ground" },
+            { url: "IMG20230719183233.jpg", title: "C#utiy@" },
+            { url: "IMG20231014045315.jpg", title: "Moon" },
+            { url: "IMG20231024183040.jpg", title: "FireWorks" },
+            { url: "IMG20231114183357.jpg", title: "Fire Deer" },
+            { url: "IMG20231123160925.jpg", title: "Baby Goat" },
+            { url: "IMG20231130084047.jpg", title: "Bomb" },
+            { url: "IMG20231210154323.jpg", title: "Puppy" },
+            { url: "IMG20231212091711.jpg", title: "Lake" },
+            { url: "IMG20240113054842.jpg", title: "Fire" },
+            { url: "IMG20240214141705.jpg", title: "Winter Plants" },
+            { url: "IMG20240512061412.jpg", title: "Chutiyas" },
+            { url: "https://images.pexels.com/photos/459203/pexels-photo-459203.jpeg?auto=compress&cs=tinysrgb&w=600", title: "Bridge" },
+            { url: "https://images.pexels.com/photos/1213447/pexels-photo-1213447.jpeg?auto=compress&cs=tinysrgb&w=600", title: "Light" },
+            { url: "https://images.pexels.com/photos/405202/pexels-photo-405202.jpeg?auto=compress&cs=tinysrgb&h=226.525&fit=crop&w=253.17499999999998&dpr=2", title: "Butterfly" },
+            { url: "https://images.pexels.com/photos/2454790/pexels-photo-2454790.jpeg?auto=compress&cs=tinysrgb&h=226.525&fit=crop&w=253.17499999999998&dpr=2", title: "Spider" },
+            { url: "https://images.pexels.com/photos/325044/pexels-photo-325044.jpeg?auto=compress&cs=tinysrgb&w=600", title: "Fish" },
+            { url: "https://images.pexels.com/photos/1229042/pexels-photo-1229042.jpeg?auto=compress&cs=tinysrgb&w=600", title: "Stars" },
+            { url: "https://images.pexels.com/photos/691668/pexels-photo-691668.jpeg?auto=compress&cs=tinysrgb&w=600", title: "Mountain" },
+            { url: "https://images.pexels.com/photos/1366957/pexels-photo-1366957.jpeg?auto=compress&cs=tinysrgb&w=600", title: "Buildings" },
+            { url: "https://media.istockphoto.com/id/1392928015/photo/sunset.jpg?b=1&s=612x612&w=0&k=20&c=7g417h-4jRE9XXBDzzS6v8kl12cBIrKnqafsv0o1WLk=", title: "Sunset" },
+            { url: "https://media.istockphoto.com/id/1333772664/photo/digital-eye-wave-lines-stock-background.jpg?b=1&s=612x612&w=0&k=20&c=5QkQ6ak20vhlLeD9w7nbfzSnTnyyMXQWx-F_8s2y2E0=", title: "Irius" },
+            { url: "https://images.pexels.com/photos/1379640/pexels-photo-1379640.jpeg?auto=compress&cs=tinysrgb&w=600", title: "Redcurrant" },
+            { url: "https://img.freepik.com/premium-photo/landscape-wallpaper-abstract-background_494423-69843.jpg?ga=GA1.1.2037612687.1742799004&semt=ais_hybrid", title: "Redcurrant" },
+        ];
+
+        const gallery = document.getElementById("gallery");
+
+        wallpapers.forEach(wallpaper => {
+            const card = document.createElement("div");
+            card.className = "card";
+            card.innerHTML = `
+                <img src="${wallpaper.url}" alt="${wallpaper.title}">
+                <h3>${wallpaper.title}</h3>
+                <a href="${wallpaper.url}" download class="download-btn">Download</a>
+            `;
+            gallery.appendChild(card);
+        });
+    </script>
+</body>
+</html>
