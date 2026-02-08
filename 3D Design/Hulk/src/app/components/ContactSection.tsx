@@ -5,8 +5,7 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative py-32 px-6 overflow-hidden"
-    >
+      className="relative py-32 px-6 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0a0a0a] to-black" />
       
@@ -14,14 +13,13 @@ export function ContactSection() {
       <div className="absolute inset-0 opacity-30">
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-[#39ff14] rounded-full blur-[200px]" />
       </div>
-
+      
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
+          transition={{ duration: 0.8 }}>
           <span className="inline-block px-4 py-2 bg-[#39ff14]/10 border border-[#39ff14]/30 rounded-full mb-8">
             <span className="text-[#39ff14] text-sm uppercase tracking-widest">
               Get In Touch
